@@ -22,7 +22,7 @@ namespace School_Library_Books_project
                 Console.WriteLine("3. Exite");
                 num = Convert.ToInt32(Console.ReadLine());
 
-                if(num >= 1 && num <= 3)
+                if(num >= 1 && num < 3)
                 {
                     switch (num)
                     {
@@ -53,10 +53,14 @@ namespace School_Library_Books_project
                     }
 
                 }
-            } while (num != 0);
+                else{
+                    if(num == 3)
+                    Environment.Exit(3);
+                }
+            } while (true);
 
 
-            Console.ReadKey();
+           
         }
     }
 }
